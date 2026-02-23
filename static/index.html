@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber &amp; Co. | Elite Diamond Valuation</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles (on top of Bootstrap) -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════
+         TOP ANNOUNCEMENT BANNER
+    ═══════════════════════════════════════════ -->
+    <div class="top-announcement-banner">
+        <div class="container-xl d-flex justify-content-center align-items-center">
+            <span class="banner-text"><i class="fas fa-gem me-2"></i> Complimentary White-Glove Global Delivery on all
+                Private Valuations</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         MARKET TICKER — Realtime Exchange
+    ═══════════════════════════════════════════ -->
+    <div class="market-ticker d-none d-md-block">
+        <div class="ticker-content">
+            <span class="ticker-item"><i class="fas fa-gem"></i> Diamond Index: <span class="up">+1.2%</span></span>
+            <span class="ticker-item"><i class="fas fa-coins"></i> Gold Spot: <span class="down">-0.4%</span></span>
+            <span class="ticker-item"><i class="fas fa-globe"></i> Antwerp Exchange: <span
+                    class="active">Open</span></span>
+            <span class="ticker-item"><i class="fas fa-chart-line"></i> Market Sentiment: <span
+                    class="bullish">Bullish</span></span>
+            <!-- Repeat for seamless loop -->
+            <span class="ticker-item"><i class="fas fa-gem"></i> Diamond Index: <span class="up">+1.2%</span></span>
+            <span class="ticker-item"><i class="fas fa-coins"></i> Gold Spot: <span class="down">-0.4%</span></span>
+            <span class="ticker-item"><i class="fas fa-globe"></i> Antwerp Exchange: <span
+                    class="active">Open</span></span>
+            <span class="ticker-item"><i class="fas fa-chart-line"></i> Market Sentiment: <span
+                    class="bullish">Bullish</span></span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         GLOBAL EXCHANGE CLOCKS — hidden on mobile
+    ═══════════════════════════════════════════ -->
+    <div class="clocks-bar d-none d-lg-block">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center gap-5">
+                <div class="clock-item">Antwerp <span id="clock-antwerp">--:--:--</span></div>
+                <span class="clock-sep"></span>
+                <div class="clock-item">New York <span id="clock-ny">--:--:--</span></div>
+                <span class="clock-sep"></span>
+                <div class="clock-item">Mumbai <span id="clock-mumbai">--:--:--</span></div>
+                <span class="clock-sep"></span>
+                <div class="clock-item">Tel Aviv <span id="clock-telaviv">--:--:--</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         BOOTSTRAP NAVBAR
+    ═══════════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-dark amber-navbar">
+        <div class="container-xl">
+            <a class="navbar-brand nav-logo" href="#">
+                <span class="logo-text">AMBER<span class="gradient-text">&amp;CO.</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#amberNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="amberNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#features">The Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#predictor">Valuation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Heritage</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn-primary-sm btn-portal-trigger">Client Portal</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════════
+         HERO SECTION — Bootstrap Grid
+    ═══════════════════════════════════════════ -->
+        <section class="hero-section">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="static/diamond.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="container-xl position-relative z-index-hero">
+                <div class="row align-items-center g-lg-5 g-4">
+                    <!-- Left Content -->
+                    <div class="col-lg-7 col-12 text-lg-start text-center hero-text-col reveal">
+                        <p class="tagline">THE AMBER STANDARD</p>
+                        <h1 class="hero-title mb-4">
+                            A Legacy Refined<br>By <span class="gradient-gold">Quantum Precision</span>
+                        </h1>
+                        <p class="hero-desc mb-5">Welcome to Amber &amp; Co. – where century-old artisanal expertise
+                            meets
+                            neural-grade diamond valuation. Trust the legacy, embrace the future.</p>
+
+                        <div class="hero-ctas d-flex flex-wrap gap-4 justify-content-lg-start justify-content-center">
+                            <a href="#predictor" class="btn-primary-bs px-5 py-3">Start Valuation</a>
+                            <a href="#features" class="btn-outline-bs px-5 py-3 text-white">The Collection</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="col-lg-5 col-12 d-flex justify-content-center align-items-center reveal-right">
+                        <div class="hero-signature-container">
+                            <img src="/static/Signature.jpg" alt="Signature Amber Diamond"
+                                class="hero-signature-img floating">
+                            <div class="hero-signature-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         THE COLLECTION — Bootstrap Card Grid
+    ═══════════════════════════════════════════ -->
+        <section id="features" class="collection-section">
+            <div class="container-xl">
+                <div class="features-header text-center reveal mb-5">
+                    <div class="badge-premium gold">The Curated Standard</div>
+                    <h2 class="section-title">The Four Pillars</h2>
+                    <p class="section-subtitle">Excellence is not an act, but a habit of precision.</p>
+                </div>
+
+                <div class="pillars-mobile-slider">
+                    <div class="row g-lg-5 g-4 flex-nowrap flex-lg-wrap row-cols-1 row-cols-md-2 row-cols-lg-4">
+                        <!-- Pillar 1 -->
+                        <div class="col reveal-bottom">
+                            <div class="card amber-card h-100">
+                                <div class="collection-img-wrapper">
+                                    <img src="/static/1%20pic.jpg" alt="Exquisite Diamond Facets" class="card-img-top">
+                                    <div class="item-tag-premium">Precision</div>
+                                </div>
+                                <div class="card-body collection-info">
+                                    <span class="sub-label-luxury">The Master's Touch</span>
+                                    <h3 class="card-title">Bespoke Cut</h3>
+                                    <p class="card-text">We analyze light dispersion and geometric symmetry to find the
+                                        soul
+                                        of the stone.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pillar 2 -->
+                        <div class="col reveal-bottom" style="transition-delay: 0.2s;">
+                            <div class="card amber-card h-100">
+                                <div class="collection-img-wrapper">
+                                    <img src="/static/2pic.jpg" alt="Premium Loose Diamond" class="card-img-top">
+                                    <div class="item-tag-premium">Purity</div>
+                                </div>
+                                <div class="card-body collection-info">
+                                    <span class="sub-label-luxury">Chromatic Essence</span>
+                                    <h3 class="card-title">Pure Spectrum</h3>
+                                    <p class="card-text">Beyond the naked eye, our sensors detect the subtle vibrations
+                                        of
+                                        diamond color.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pillar 3 -->
+                        <div class="col reveal-bottom" style="transition-delay: 0.4s;">
+                            <div class="card amber-card h-100">
+                                <div class="collection-img-wrapper">
+                                    <img src="/static/3pic.jpg" alt="Microscopic Clarity" class="card-img-top">
+                                    <div class="item-tag-premium">Authenticity</div>
+                                </div>
+                                <div class="card-body collection-info">
+                                    <span class="sub-label-luxury">Microscopic Truth</span>
+                                    <h3 class="card-title">Flawless Depth</h3>
+                                    <p class="card-text">Identifying nature's unique fingerprints with atomic-level
+                                        accuracy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pillar 4 -->
+                        <div class="col reveal-bottom" style="transition-delay: 0.6s;">
+                            <div class="card amber-card h-100">
+                                <div class="collection-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=800&q=80"
+                                        alt="Ethical Sourcing" class="card-img-top">
+                                    <div class="item-tag-premium">Legacy</div>
+                                </div>
+                                <div class="card-body collection-info">
+                                    <span class="sub-label-luxury">Noble Origin</span>
+                                    <h3 class="card-title">Ethical Sourcing</h3>
+                                    <p class="card-text">Every stone is conflict-free and tracked with blockchain
+                                        transparency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New CTA for Shop -->
+                <div class="text-center mt-5 reveal">
+                    <p class="text-muted mb-4" style="letter-spacing: 2px;">Seeking a unique configuration?</p>
+                    <a href="/static/shop.html" class="btn-outline-bs text-white px-5 py-3">Explore Elite Collection
+                        &amp;
+                        Order <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         HERITAGE SECTION
+    ═══════════════════════════════════════════ -->
+        <section id="process" class="heritage-section">
+            <div class="container-xl">
+                <div class="row g-lg-5 g-4 align-items-center">
+                    <!-- Video Side -->
+                    <div class="col-lg-6 col-12 reveal">
+                        <div class="main-visual">
+                            <video autoplay muted loop playsinline class="heritage-img img-fluid">
+                                <source src="/static/vedio1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="experience-badge-premium">
+                                <span class="year">Est. 1924</span>
+                                <span class="label">Antwerp Heritage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text Side -->
+                    <div class="col-lg-6 col-12 heritage-text-content reveal-right">
+                        <div class="badge-premium gold mb-3">The Amber Standard</div>
+                        <h2 class="section-title mb-4">A Legacy Refined <br>by Quantum Precision</h2>
+                        <p class="section-desc">We bridge the gap between a century of Antwerp’s master craftsmanship
+                            and
+                            the future of digital valuation. Luxury is no longer just felt—it is calculated with
+                            absolute
+                            certainty.</p>
+
+                        <div class="heritage-pillars">
+                            <!-- Pillar 01 -->
+                            <div class="pillar">
+                                <div class="pillar-number">01</div>
+                                <div class="pillar-info">
+                                    <h3 class="h5 mb-2">Artisanal Lineage</h3>
+                                    <p class="mb-0">Every stone is touched by the wisdom of third-generation
+                                        gemologists,
+                                        following the strict protocols of the Diamond Quarter.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pillar 02 -->
+                            <div class="pillar">
+                                <div class="pillar-number">02</div>
+                                <div class="pillar-info">
+                                    <h3 class="h5 mb-2">Digital Fingerprinting</h3>
+                                    <p class="mb-0">Our neural networks analyze 256 unique light-scattering points to
+                                        create
+                                        a permanent, digital twin of your asset.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         MASTER GEMOLOGISTS SECTION
+    ═══════════════════════════════════════════ -->
+        <section class="expert-section">
+            <div class="container-xl">
+                <div class="row g-lg-5 g-4 align-items-center">
+                    <!-- Text Column (Compact) -->
+                    <div class="col-lg-4 col-12 expert-text reveal">
+                        <div class="badge-premium gold mb-3">The Human Element</div>
+                        <h2 class="section-title mb-4">Where Science <br>Meets Intuition</h2>
+                        <p class="section-desc">While our AI processes millions of data points, it is guided by the
+                            wisdom
+                            of world-class gemologists from Antwerp and Mumbai. We combine the power of logic with
+                            decades
+                            of artisanal instinct.</p>
+
+                        <div class="expert-stats d-flex gap-5 mt-5">
+                            <div class="e-stat">
+                                <span>40+</span>
+                                <small class="d-block mt-2">Years Experience</small>
+                            </div>
+                            <div class="e-stat">
+                                <span>GIA</span>
+                                <small class="d-block mt-2">Certified Masters</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Column (Large) -->
+                    <div class="col-lg-8 col-12 expert-visual reveal-right">
+                        <div class="expert-img-frame shadow-lg">
+                            <video autoplay muted loop playsinline class="expert-img img-fluid w-100 h-100">
+                                <source src="/static/vedio2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="floating-quote">"Nature creates; we authenticate."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         4Cs MASTERY — Bootstrap Cards
+    ═══════════════════════════════════════════ -->
+        <section class="mastery-section">
+            <div class="container-xl">
+                <div class="mastery-header text-center mb-5">
+                    <div class="badge-premium">The Amber Standard</div>
+                    <h2 class="section-title">The 4Cs of Diamond Excellence</h2>
+                    <p class="section-subtitle">Understanding the variables that define timeless value.</p>
+                </div>
+                <div class="pillars-mobile-slider">
+                    <div class="row g-4 flex-nowrap flex-lg-wrap row-cols-1 row-cols-md-2 row-cols-lg-4">
+                        <!-- Carat -->
+                        <div class="col">
+                            <div class="card mastery-card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    <h3 class="card-title">Carat</h3>
+                                    <p class="card-text">The unit of weight for diamonds. A 1.00ct diamond weighs
+                                        precisely
+                                        200 milligrams.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cut -->
+                        <div class="col">
+                            <div class="card mastery-card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-bezier-curve"></i>
+                                    <h3 class="card-title">Cut</h3>
+                                    <p class="card-text">The most important factor. Our AI weighs the light reflection
+                                        and
+                                        geometric symmetry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Color -->
+                        <div class="col">
+                            <div class="card mastery-card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-palette"></i>
+                                    <h3 class="card-title">Color</h3>
+                                    <p class="card-text">From D (colorless) to Z. We detect subtle tints invisible to
+                                        the
+                                        human eye.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Clarity -->
+                        <div class="col">
+                            <div class="card mastery-card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-microscope"></i>
+                                    <h3 class="card-title">Clarity</h3>
+                                    <p class="card-text">The assessment of internal and external characteristics—the
+                                        fingerprints of nature.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         VALUATION SECTION — Bootstrap Form
+    ═══════════════════════════════════════════ -->
+        <section id="predictor" class="valuation-section">
+            <div class="container">
+                <div class="predictor-container reveal-bottom">
+                    <div class="predictor-header text-center mb-5">
+                        <div class="badge-premium gold">The Valuator v4.2</div>
+                        <h2>Private Valuation</h2>
+                        <p>Consult our neural-network for heritage-grade estimation.</p>
+                    </div>
+
+                    <section class="glass-card">
+                        <form id="predictionForm">
+                            <!-- Main Fields Grid -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Carat Weight</label>
+                                        <input type="number" id="carat" name="carat" step="0.01" value="0.70" required
+                                            class="form-control amber-input">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Cut Quality</label>
+                                        <select id="cut" name="cut" required class="form-select amber-input">
+                                            <option value="Ideal">Ideal</option>
+                                            <option value="Premium">Premium</option>
+                                            <option value="Very Good">Very Good</option>
+                                            <option value="Good">Good</option>
+                                            <option value="Fair">Fair</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Color Grade</label>
+                                        <select id="color" name="color" required class="form-select amber-input">
+                                            <option value="D">D — Exceptional White</option>
+                                            <option value="E">E — Rare White</option>
+                                            <option value="F">F — Rare White</option>
+                                            <option value="G">G — White</option>
+                                            <option value="H">H — White</option>
+                                            <option value="I">I — Slightly Tinted</option>
+                                            <option value="J">J — Slightly Tinted</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Clarity Grade</label>
+                                        <select id="clarity" name="clarity" required class="form-select amber-input">
+                                            <option value="IF">IF — Flawless</option>
+                                            <option value="VVS1">VVS1 — Minute Inclusions</option>
+                                            <option value="VVS2">VVS2 — Minute Inclusions</option>
+                                            <option value="VS1">VS1 — Minor Inclusions</option>
+                                            <option value="VS2">VS2 — Minor Inclusions</option>
+                                            <option value="SI1">SI1 — Slight Inclusions</option>
+                                            <option value="SI2">SI2 — Slight Inclusions</option>
+                                            <option value="I1">I1 — Inclusions</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Total Depth %</label>
+                                        <input type="number" id="depth" name="depth" step="0.1" value="61.5" required
+                                            class="form-control amber-input">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Table Width %</label>
+                                        <input type="number" id="table" name="table" step="0.1" value="55.0" required
+                                            class="form-control amber-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Physical Dimensions -->
+                            <div class="dimensions-header mb-3">Physical Measurements (mm)</div>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Length (x)</label>
+                                        <input type="number" id="x" name="x" step="0.01" value="5.73" required
+                                            class="form-control amber-input">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Width (y)</label>
+                                        <input type="number" id="y" name="y" step="0.01" value="5.75" required
+                                            class="form-control amber-input">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group-bs">
+                                        <label class="form-label">Height (z)</label>
+                                        <input type="number" id="z" name="z" step="0.01" value="3.53" required
+                                            class="form-control amber-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="predict-btn w-100">
+                                <span class="btn-text">Obtain Valuation</span>
+                            </button>
+                        </form>
+
+                        <div id="resultContainer" class="result-card hidden">
+                            <div class="result-badge">Certified Market Estimate</div>
+                            <div class="price-display">
+                                <span class="currency">$</span>
+                                <span id="predictedPrice" class="price-value">0.00</span>
+                            </div>
+                            <div class="market-indicator">
+                                <i class="fas fa-chart-line"></i> Based on Spot Market Exchange Data
+                            </div>
+                            <button id="downloadCert" class="cert-btn">
+                                <i class="fas fa-file-contract"></i> Download Valuation Certificate
+                            </button>
+                            <p class="cert-note">Official Amber &amp; Co. Neural Authentication</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         GLOBAL PRESENCE — Bootstrap Grid
+    ═══════════════════════════════════════════ -->
+        <section class="global-presence reveal">
+            <div class="container-xl">
+                <div class="global-header text-center mb-5">
+                    <div class="badge-premium">Universal Network</div>
+                    <h2>Integrated with Global Exchanges</h2>
+                </div>
+                <div class="pillars-mobile-slider mt-5">
+                    <div class="row g-4 flex-nowrap flex-lg-wrap row-cols-1 row-cols-md-2 row-cols-lg-4">
+                        <div class="col">
+                            <div class="location-item text-center reveal-bottom">
+                                <span class="city">Antwerp</span>
+                                <span class="region">The Diamond Quarter</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="location-item text-center reveal-bottom" style="transition-delay:0.1s">
+                                <span class="city">New York</span>
+                                <span class="region">47th Street Exchange</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="location-item text-center reveal-bottom" style="transition-delay:0.2s">
+                                <span class="city">Tel Aviv</span>
+                                <span class="region">Ramat Gan Complex</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="location-item text-center reveal-bottom" style="transition-delay:0.3s">
+                                <span class="city">Mumbai</span>
+                                <span class="region">Bharat Diamond Bourse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+        <footer class="footer">
+            <div class="container-xl">
+                <div class="row g-3 align-items-start footer-container">
+                    <div class="col-lg-4 col-md-6 col-12 footer-brand">
+                        <a href="#" class="nav-logo text-decoration-none">
+                            <span class="logo-text">AMBER <span class="gradient-gold">&amp; CO.</span></span>
+                        </a>
+                        <p class="brand-desc mt-2">Shaping the future of luxury through a century of Antwerp heritage
+                            and
+                            cutting-edge neural intelligence.</p>
+                        <div class="social-links d-flex gap-3">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 col-12">
+                        <div class="row g-3 footer-nav">
+                            <div class="col-6 link-group">
+                                <h4>The House</h4>
+                                <div class="link-group-links">
+                                    <a href="/static/collection-page.html">The Collection</a>
+                                    <a href="/static/heritage-page.html">Our Heritage</a>
+                                    <a href="/static/valuation-portal.html">Valuation Portal</a>
+                                    <a href="/static/private-office.html">Private Office</a>
+                                </div>
+                            </div>
+                            <div class="col-6 link-group">
+                                <h4>Legal &amp; Trust</h4>
+                                <div class="link-group-links">
+                                    <a href="/static/privacy.html">Privacy Policy</a>
+                                    <a href="/static/terms.html">Terms of Service</a>
+                                    <a href="/static/data-accuracy.html">Data Accuracy</a>
+                                    <a href="/static/certification.html">Certification</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 col-12 footer-newsletter">
+                        <h4>Join the Circle</h4>
+                        <p class="text-muted small mb-0">Exclusive market insights &amp; collection updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-lower">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center lower-content">
+                        <p class="mb-0">&copy; 2026 Amber &amp; Co. All rights reserved.</p>
+                        <div class="lower-links d-flex gap-3">
+                            <span>Global Exchange Partner</span>
+                            <span class="dot"></span>
+                            <span>AI Project Gallery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- ═══════════════════════════════════════════
+         CLIENT PORTAL MODAL
+    ═══════════════════════════════════════════ -->
+    <div id="portalModal" class="portal-overlay hidden">
+        <div class="portal-modal">
+            <button class="portal-close" id="closePortal"><i class="fas fa-times"></i></button>
+
+            <!-- Login View -->
+            <div class="portal-content" id="loginView">
+                <div class="portal-header">
+                    <div class="badge-premium gold">Security Terminal</div>
+                    <h2>Private Access</h2>
+                    <p>Authorization required for secure client office.</p>
+                </div>
+
+                <form id="portalLoginForm" class="portal-form">
+                    <!-- Demo hint hidden behind toggle — security improvement -->
+                    <div class="portal-hint-toggle mb-3">
+                        <button type="button" class="btn btn-sm btn-outline-secondary w-100" id="toggleDemoHint">
+                            <i class="fas fa-info-circle me-2"></i>Need demo credentials?
+                        </button>
+                        <div id="demoHint" class="portal-hint mt-2 d-none">
+                            <i class="fas fa-lock"></i> Demo: <kbd>vip@amberandco.global</kbd> / <kbd>AMBER2026</kbd>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Client ID / Email</label>
+                        <input type="email" class="form-control amber-input" placeholder="client@amberandco.global"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Access Key</label>
+                        <input type="password" class="form-control amber-input" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="portal-btn w-100">Authorize Access</button>
+                    <div class="portal-footer-text text-center mt-3">
+                        <span>Forgotten access keys?</span>
+                        <a href="#" id="openConcierge"> Contact Concierge</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Concierge Service View -->
+            <div class="portal-content hidden" id="conciergeView">
+                <div class="portal-header">
+                    <div class="badge gold">Concierge Service</div>
+                    <h2>Private Assistance</h2>
+                    <p>Our masters are available for personal consultation and technical support.</p>
+                </div>
+                <form id="conciergeForm" class="portal-form">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control amber-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Subject</label>
+                        <select class="form-select amber-input" required>
+                            <option value="">Select Assistance Type</option>
+                            <option value="access">Access Key Recovery</option>
+                            <option value="valuation">Valuation Consultation</option>
+                            <option value="private">Private Collection Access</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control amber-input" rows="3"
+                            placeholder="How may we assist you today?"></textarea>
+                    </div>
+                    <button type="submit" class="portal-btn w-100">Send Request</button>
+                    <div class="portal-footer-text text-center mt-3">
+                        <a href="#" id="backToLogin"><i class="fas fa-arrow-left"></i> Return to Login</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Mock Dashboard View -->
+            <div class="portal-dashboard hidden" id="dashboardView">
+                <div class="portal-header">
+                    <div class="badge gold">Authenticated</div>
+                    <h2>Welcome, Client</h2>
+                    <p>Manage your private valuations and market alerts.</p>
+                </div>
+                <div class="row g-3 dashboard-grid mb-4">
+                    <div class="col-6">
+                        <div class="dash-card">
+                            <span class="card-label">Total Asset Value</span>
+                            <span class="card-val">$142,500</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="dash-card">
+                            <span class="card-label">Recent Estimates</span>
+                            <span class="card-val">04</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-valuations mb-4">
+                    <h4>Recent Valuations</h4>
+                    <div class="val-item d-flex justify-content-between">
+                        <span class="val-name">Round Brilliant 1.2ct</span>
+                        <span class="val-price">$12,400</span>
+                    </div>
+                    <div class="val-item d-flex justify-content-between">
+                        <span class="val-name">Emerald Cut 0.9ct</span>
+                        <span class="val-price">$8,200</span>
+                    </div>
+                </div>
+                <button class="portal-btn secondary w-100" id="portalLogout">Secure Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+
+</html>

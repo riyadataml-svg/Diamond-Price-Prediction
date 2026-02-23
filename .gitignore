@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.venv
+env/
+venv/
+.vscode/
+.idea/
+*.log
+.DS_Store
+node_modules/
+dist/
+build/
+.agent/
+.gemini/
